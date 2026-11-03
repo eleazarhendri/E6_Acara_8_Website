@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Siaran Pers — PT Indocement Tunggal Prakarsa Tbk.</title>
+  <meta name="description" content="Siaran pers dan pengumuman resmi dari PT Indocement Tunggal Prakarsa Tbk.">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Jost:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .media-hero{position:relative;height:300px;background:url('assets/img/bg/bg-4.webp') center/cover no-repeat;display:flex;align-items:flex-end;padding-bottom:36px}
+    .media-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,15,30,.3),rgba(5,15,30,.7))}
+    .media-hero-content{position:relative;z-index:1;width:100%}
+    .media-hero h1{font-family:'Jost',sans-serif;font-size:36px;font-weight:700;color:#fff;margin:0 0 6px}
+    .media-breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.7)}
+    .media-breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none}.media-breadcrumb a:hover{color:#47b2e4}
+    .media-content{padding:48px 0 80px;background:#f7f9fb}
+    /* Year filter */
+    .year-filter{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
+    .year-btn{padding:7px 18px;border:1.5px solid #d0dae8;border-radius:50px;font-size:13px;font-weight:500;color:#4a6080;background:#fff;cursor:pointer;transition:all .2s;text-decoration:none}
+    .year-btn:hover,.year-btn.active{background:#1a3a6b;color:#fff;border-color:#1a3a6b}
+    /* Press list */
+    .press-wrap{background:#fff;border-radius:12px;box-shadow:0 2px 14px rgba(0,0,0,.06);overflow:hidden}
+    .press-header{background:#1a3a6b;padding:20px 28px;display:flex;align-items:center;gap:10px}
+    .press-header h2{font-family:'Jost',sans-serif;font-size:17px;font-weight:700;color:#fff;margin:0}
+    .press-header i{color:#47b2e4;font-size:18px}
+    .press-item{display:flex;align-items:flex-start;gap:18px;padding:20px 28px;border-bottom:1px solid #f0f4f8;text-decoration:none;transition:background .15s}
+    .press-item:last-child{border-bottom:none}
+    .press-item:hover{background:#f8fafd}
+    .press-item:hover .pi-title{color:#47b2e4}
+    .pdate{flex-shrink:0;width:56px;background:#f0f4fa;border-radius:8px;padding:9px 6px;text-align:center;border-top:3px solid #1a3a6b}
+    .pdate .d{font-family:'Jost',sans-serif;font-size:22px;font-weight:700;color:#1a3a6b;line-height:1}
+    .pdate .m{font-size:10.5px;color:#7a8fa0;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+    .pi-c{flex:1}
+    .pi-cat{font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#47b2e4;margin-bottom:4px}
+    .pi-title{font-family:'Jost',sans-serif;font-size:15px;font-weight:600;color:#1a2e4a;line-height:1.45;margin:0 0 6px;transition:color .2s}
+    .pi-desc{font-size:13px;color:#7a8fa0;line-height:1.6;margin:0}
+    .pi-arrow{color:#c0ccd8;font-size:20px;flex-shrink:0;margin-top:2px;transition:color .2s}
+    .press-item:hover .pi-arrow{color:#1a3a6b}
+    .pi-file{display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:12px;color:#1a3a6b;font-weight:500}
+    .pi-file i{font-size:14px}
+    /* Pagination */
+    .media-pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:36px}
+    .media-pagination a,.media-pagination span{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:6px;font-size:14px;font-weight:500;color:#4a6080;background:#fff;border:1px solid #dde4ee;text-decoration:none;transition:all .2s}
+    .media-pagination a:hover,.media-pagination a.active{background:#1a3a6b;color:#fff;border-color:#1a3a6b}
+    @media(max-width:576px){.press-item{padding:16px 18px;gap:12px}.media-hero h1{font-size:26px}.media-hero{height:220px}}
+  </style>
+</head>
+<body class="media-page">
+
+  <header id="header" class="header fixed-top scrolled">
+    <div class="header-inner d-flex align-items-center">
+      <a href="index.html" class="logo-badge">
+        <img src="assets/img/logopt.png" alt="Logo Indocement">
+        <div class="logo-badge-text">
+          <span class="logo-badge-name">Indocement</span>
+          <span class="logo-badge-sub">Tunggal Prakarsa Tbk.</span>
+        </div>
+      </a>
+      <nav id="navmenu" class="navmenu mx-auto">
+        <ul>
+          <li class="dropdown"><a href="#" onclick="return false;"><span>Perusahaan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="perusahaan-tentang.html">Tentang Kami</a></li>
+              <li><a href="perusahaan-manajemen.html">Manajemen</a></li>
+              <li><a href="perusahaan-struktur.html">Struktur Perusahaan</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" onclick="return false;"><span>Bisnis Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="bisnis-semen.html">Semen</a></li>
+              <li><a href="bisnis-beton.html">Beton Siap Pakai</a></li>
+              <li><a href="bisnis-agregat.html">Agregat</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" onclick="return false;"><span>Investor</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="investor-rups.html">Rapat Umum Pemegang Saham</a></li>
+              <li><a href="investor-saham.html">Informasi Saham</a></li>
+              <li><a href="investor-laporan.html">Laporan &amp; Presentasi</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" onclick="return false;"><span>Keberlanjutan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="keberlanjutan-csr.html">CSR Program</a></li>
+              <li><a href="keberlanjutan-kebijakan.html">Kebijakan &amp; Program</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" onclick="return false;" class="active"><span>Media</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="media-berita.html">Berita &amp; Acara</a></li>
+              <li><a href="media-siaran-pers.html">Siaran Pers</a></li>
+              <li><a href="media-galeri.html">Galeri Media</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-actions d-flex align-items-center">
+        <button class="header-search-btn" aria-label="Cari" id="searchToggleBtn"><i class="bi bi-search"></i></button>
+        <div class="header-lang d-none d-lg-flex align-items-center gap-1">
+          <a href="#" class="lang-btn active">ID</a><span>▾</span>
+        </div>
+      </div>
+    </div>
+    <div id="headerSearchBar" class="header-search-bar">
+      <div class="container-fluid container-xl d-flex align-items-center">
+        <i class="bi bi-search me-3"></i>
+        <input type="text" placeholder="Cari siaran pers..." aria-label="Pencarian">
+        <button id="searchCloseBtn"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" style="padding-top:78px">
+
+    <div class="media-hero">
+      <div class="media-hero-content container">
+        <nav class="media-breadcrumb mb-2">
+          <a href="index.html"><i class="bi bi-house-fill me-1"></i>Beranda</a>
+          <span><i class="bi bi-chevron-right" style="font-size:10px"></i></span>
+          <a href="#">Media</a>
+          <span><i class="bi bi-chevron-right" style="font-size:10px"></i></span>
+          <span style="color:#fff">Siaran Pers</span>
+        </nav>
+        <h1>Siaran Pers</h1>
+      </div>
+    </div>
+
+    <div class="media-content">
+      <div class="container">
+
+        <!-- Filter tahun -->
+        <div class="year-filter" data-aos="fade-up">
+          <a href="#" class="year-btn active">Semua</a>
+          <a href="#" class="year-btn">2026</a>
+          <a href="#" class="year-btn">2025</a>
+          <a href="#" class="year-btn">2024</a>
+          <a href="#" class="year-btn">2023</a>
+          <a href="#" class="year-btn">2022</a>
+        </div>
+
+        <!-- Siaran Pers List -->
+        <div class="press-wrap" data-aos="fade-up">
+          <div class="press-header">
+            <i class="bi bi-newspaper"></i>
+            <h2>Siaran Pers Terbaru</h2>
+          </div>
+
+          <a href="blog-details.html" class="press-item">
+            <div class="pdate"><span class="d">28</span><span class="m">Okt</span></div>
+            <div class="pi-c">
+              <div class="pi-cat">Laporan Keuangan</div>
+              <div class="pi-title">Laporan Keuangan Konsolidasian Indocement 30 September 2026</div>
+              <p class="pi-desc">PT Indocement Tunggal Prakarsa Tbk. merilis laporan keuangan konsolidasian untuk periode yang berakhir 30 September 2026.</p>
+              <span class="pi-file"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Unduh PDF (2.4 MB)</span>
+            </div>
+            <i class="bi bi-arrow-right-circle pi-arrow"></i>
+          </a>
+
+          <a href="blog-details.html" class="press-item">
+            <div class="pdate"><span class="d">05</span><span class="m">Okt</span></div>
+            <div class="pi-c">
+              <div class="pi-cat">Kerja Sama</div>
+              <div class="pi-title">Indocement Tandatangani MoU Pengembangan Semen Ramah Lingkungan dengan ITB</div>
+              <p class="pi-desc">Kerja sama riset dan pengembangan untuk menghasilkan produk semen dengan jejak karbon lebih rendah.</p>
+              <span class="pi-file"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Unduh PDF (1.1 MB)</span>
+            </div>
+            <i class="bi bi-arrow-right-circle pi-arrow"></i>
+          </a>
+
+          <a href="blog-details.html" class="press-item">
+            <div class="pdate"><span class="d">03</span><span class="m">Sep</span></div>
+            <div class="pi-c">
+              <div class="pi-cat">Korporat</div>
+              <div class="pi-title">RUPS Luar Biasa Indocement Setujui Pembagian Dividen Interim 2026</div>
+              <p class="pi-desc">Rapat Umum Pemegang Saham menyetujui dividen interim sebesar Rp 250 per lembar saham.</p>
+              <span class="pi-file"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Unduh PDF (0.8 MB)</span>
+            </div>
+            <i class="bi bi-arrow-right-circle pi-arrow"></i>
+          </a>
+
+          <a href="blog-details.html" class="press-item">
+            <div class="pdate"><span class="d">15</span><span class="m">Jul</span></div>
+            <div class="pi-c">
+              <div class="pi-cat">Laporan Keuangan</div>
+              <div class="pi-title">Laporan Keuangan Konsolidasian Indocement 30 Juni 2026</div>
+              <p class="pi-desc">PT Indocement Tunggal Prakarsa Tbk. merilis laporan keuangan konsolidasian untuk periode yang berakhir 30 Juni 2026.</p>
+              <span class="pi-file"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Unduh PDF (2.3 MB)</span>
+            </div>
+            <i class="bi bi-arrow-right-circle pi-arrow"></i>
+          </a>
+
+          <a href="blog-details.html" class="press-item">
+            <div class="pdate"><span class="d">30</span><span class="m">Apr</span></div>
+            <div class="pi-c">
+              <div class="pi-cat">Laporan Keuangan</div>
+              <div class="pi-title">Laporan Keuangan Konsolidasian Indocement 31 Maret 2026</div>
+              <p class="pi-desc">PT Indocement Tunggal Prakarsa Tbk. merilis laporan keuangan konsolidasian untuk kuartal pertama tahun 2026.</p>
+              <span class="pi-file"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Unduh PDF (2.1 MB)</span>
+            </div>
+            <i class="bi bi-arrow-right-circle pi-arrow"></i>
+          </a>
+
+          <a href="blog-details.html" class="press-item">
+            <div class="pdate"><span class="d">10</span><span class="m">Mar</span></div>
+            <div class="pi-c">
+              <div class="pi-cat">Korporat</div>
+              <div class="pi-title">RUPS Tahunan 2026 Indocement: Persetujuan Laporan Tahunan dan Penetapan Direksi</div>
+              <p class="pi-desc">Rapat Umum Pemegang Saham Tahunan menyetujui laporan tahunan 2025 dan menetapkan susunan Direksi dan Dewan Komisaris baru.</p>
+              <span class="pi-file"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Unduh PDF (1.5 MB)</span>
+            </div>
+            <i class="bi bi-arrow-right-circle pi-arrow"></i>
+          </a>
+
+          <a href="blog-details.html" class="press-item">
+            <div class="pdate"><span class="d">29</span><span class="m">Jan</span></div>
+            <div class="pi-c">
+              <div class="pi-cat">Laporan Keuangan</div>
+              <div class="pi-title">Laporan Keuangan Konsolidasian Indocement 31 Desember 2025</div>
+              <p class="pi-desc">PT Indocement Tunggal Prakarsa Tbk. merilis laporan keuangan konsolidasian untuk tahun yang berakhir 31 Desember 2025.</p>
+              <span class="pi-file"><i class="bi bi-file-earmark-pdf-fill text-danger"></i> Unduh PDF (3.2 MB)</span>
+            </div>
+            <i class="bi bi-arrow-right-circle pi-arrow"></i>
+          </a>
+
+        </div>
+
+        <div class="media-pagination">
+          <a href="#"><i class="bi bi-chevron-left"></i></a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <span>...</span>
+          <a href="#">10</a>
+          <a href="#"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+  
+
+  
+
+
+  
+
+  
+    <!-- Clients Marquee -->
+    <section style="background:#fff;padding:44px 0;border-top:1px solid #edf1f5;">
+      <style>
+        .cq-wrap{overflow:hidden;position:relative;}
+        .cq-wrap::before,.cq-wrap::after{content:'';position:absolute;top:0;bottom:0;width:160px;z-index:2;pointer-events:none;}
+        .cq-wrap::before{left:0;background:linear-gradient(to right,#fff 50%,transparent);}
+        .cq-wrap::after{right:0;background:linear-gradient(to left,#fff 50%,transparent);}
+        .cq-track{display:flex;align-items:center;width:max-content;gap:120px;padding:10px 0;
+                  animation:cqScroll 20s linear infinite;}
+        .cq-track:hover{animation-play-state:paused;}
+        @keyframes cqScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+        .cq-item{display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+        .cq-item a{display:flex;align-items:center;opacity:.7;transition:opacity .3s;}
+        .cq-item a:hover{opacity:1;}
+        .cq-item img{height:72px;width:auto;max-width:180px;object-fit:contain;display:block;}
+      </style>
+      <div class="cq-wrap">
+        <div class="cq-track">
+          <div class="cq-item"><a href="https://sementigaroda.com/" target="_blank" rel="noopener"><img src="assets/img/clients/clients-1.webp" alt="Semen Tiga Roda"></a></div>
+          <div class="cq-item"><a href="https://www.heidelbergmaterials.com/en" target="_blank" rel="noopener"><img src="assets/img/clients/clients-2.webp" alt="Heidelberg Materials"></a></div>
+          <div class="cq-item"><a href="#"><img src="assets/img/clients/clients-3.webp" alt="Garuda"></a></div>
+          <div class="cq-item"><a href="https://pionirbeton.co.id/id/" target="_blank" rel="noopener"><img src="assets/img/clients/clients-4.webp" alt="Pionir Beton"></a></div>
+          <div class="cq-item"><a href="https://www.tokotigaroda.com/" target="_blank" rel="noopener"><img src="assets/img/clients/clients-5.webp" alt="Toko Tiga Roda"></a></div>
+          <div class="cq-item"><a href="https://sementigaroda.com/" target="_blank" rel="noopener"><img src="assets/img/clients/clients-1.webp" alt="Semen Tiga Roda"></a></div>
+          <div class="cq-item"><a href="https://www.heidelbergmaterials.com/en" target="_blank" rel="noopener"><img src="assets/img/clients/clients-2.webp" alt="Heidelberg Materials"></a></div>
+          <div class="cq-item"><a href="#"><img src="assets/img/clients/clients-3.webp" alt="Garuda"></a></div>
+          <div class="cq-item"><a href="https://pionirbeton.co.id/id/" target="_blank" rel="noopener"><img src="assets/img/clients/clients-4.webp" alt="Pionir Beton"></a></div>
+          <div class="cq-item"><a href="https://www.tokotigaroda.com/" target="_blank" rel="noopener"><img src="assets/img/clients/clients-5.webp" alt="Toko Tiga Roda"></a></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center"><span class="sitename">Indocement</span></a>
+          <div class="footer-contact pt-3">
+            <p>Wisma Indocement Lt. 13</p>
+            <p>Jl. Jenderal Sudirman Kav. 70-71</p>
+            <p>Jakarta Selatan 12910, Indonesia</p>
+            <p class="mt-3"><strong>Telepon:</strong> <span>+62 21 251 2121</span></p>
+            <p><strong>Email:</strong> <span>corsec@indocement.co.id</span></p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Beranda</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="perusahaan-tentang.html">Tentang Kami</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-semen.html">Produk</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Produk Kami</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-semen.html">Semen Tiga Roda</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-beton.html">Beton Siap Pakai</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-agregat.html">Agregat</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="media-berita.html">Berita</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h4>Ikuti Kami</h4>
+          <p>Temukan informasi terbaru Indocement di media sosial kami</p>
+          <div class="social-links d-flex">
+            <a href="https://x.com/harmoni3roda" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/sementigaroda" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/harmoni3roda" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/pt-indocement-tunggal-prakarsa-tbk---heidelbergcement-group/home/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@harmoni3roda" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.tiktok.com/@harmoni3roda" target="_blank"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">PT Indocement Tunggal Prakarsa Tbk.</strong> <span>Hak Cipta Dilindungi</span></p>
+      <div class="credits">Template by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a></div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>const sb=document.getElementById('searchToggleBtn'),bar=document.getElementById('headerSearchBar'),sc=document.getElementById('searchCloseBtn');sb&&sb.addEventListener('click',()=>{bar.classList.toggle('open');if(bar.classList.contains('open'))bar.querySelector('input').focus()});sc&&sc.addEventListener('click',()=>bar.classList.remove('open'));</script>
+</body>
+</html>
