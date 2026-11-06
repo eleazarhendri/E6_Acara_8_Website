@@ -13,21 +13,25 @@
   <style>
     .ph{position:relative;height:300px;background:url('assets/img/bg/bg-3.webp') center/cover no-repeat;display:flex;align-items:flex-end;padding-bottom:36px}.ph::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,15,30,.3),rgba(5,15,30,.72))}.phc{position:relative;z-index:1;width:100%}.ph h1{font-family:'Jost',sans-serif;font-size:36px;font-weight:700;color:#fff;margin:0 0 6px}
     .crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.7)}.crumb a{color:rgba(255,255,255,.7);text-decoration:none}.crumb a:hover{color:#47b2e4}
-    .pc{padding:56px 0 88px;background:#f7f9fb}
-    .card-box{background:#fff;border-radius:12px;padding:36px 40px;box-shadow:0 2px 16px rgba(0,0,0,.07);margin-bottom:28px}
+    .pc{padding:40px 0 56px;background:#f7f9fb}
+    .card-box{background:#fff;border-radius:12px;padding:36px 40px;box-shadow:0 2px 16px rgba(0,0,0,.07);margin-bottom:20px}
     .card-box h2{font-family:'Jost',sans-serif;font-size:22px;font-weight:700;color:#1a2e4a;margin:0 0 20px;padding-bottom:14px;border-bottom:2px solid #e8ecf0}
-    /* Ownership chart */
-    .ownership-chart{display:flex;flex-direction:column;align-items:center;gap:0;margin:24px 0}
-    .oc-node{background:#1a3a6b;color:#fff;border-radius:10px;padding:14px 28px;text-align:center;font-family:'Jost',sans-serif;font-weight:700;font-size:15px;min-width:220px;box-shadow:0 4px 14px rgba(26,58,107,.3)}
+    /* Ownership chart - improved visual like indocement.co.id */
+    .ownership-chart{display:flex;flex-direction:column;align-items:center;gap:0;margin:24px 0;overflow-x:auto;padding-bottom:8px}
+    .oc-node{background:#1a3a6b;color:#fff;border-radius:10px;padding:16px 32px;text-align:center;font-family:'Jost',sans-serif;font-weight:700;font-size:15px;min-width:240px;box-shadow:0 4px 14px rgba(26,58,107,.25);position:relative}
     .oc-node.sub{background:#fff;color:#1a2e4a;border:2px solid #1a3a6b;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+    .oc-node.main-co{background:#37517e;min-width:300px;padding:18px 36px}
     .oc-node .pct{font-size:22px;font-weight:800;color:#47b2e4;display:block;line-height:1}
-    .oc-node.sub .pct{color:#1a3a6b}
-    .oc-node small{font-size:11.5px;opacity:.8;font-weight:400}
-    .oc-line{width:2px;height:32px;background:#c0ccd8}
-    .oc-branch{display:flex;align-items:flex-start;gap:40px;position:relative}
-    .oc-branch::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:calc(100% - 220px);height:2px;background:#c0ccd8}
+    .oc-node.sub .pct{color:#1a3a6b;font-size:18px}
+    .oc-node.main-co .pct{font-size:18px;color:#fff;letter-spacing:.5px}
+    .oc-node small{font-size:11.5px;opacity:.75;font-weight:400;display:block;margin-top:4px}
+    .oc-node.main-co small{color:rgba(255,255,255,.7);font-size:12px}
+    .oc-line{width:2px;height:32px;background:#b0bec8;margin:0 auto}
+    .oc-branch-wrap{position:relative;width:100%}
+    .oc-hline{width:60%;height:2px;background:#b0bec8;margin:0 auto}
+    .oc-branch{display:flex;align-items:flex-start;justify-content:center;gap:30px;position:relative}
     .oc-branch-item{display:flex;flex-direction:column;align-items:center;gap:0}
-    .oc-branch-line{width:2px;height:24px;background:#c0ccd8}
+    .oc-branch-line{width:2px;height:24px;background:#b0bec8}
     /* Table */
     .tbl{width:100%;border-collapse:collapse;font-size:14px}
     .tbl th{background:#1a3a6b;color:#fff;padding:12px 16px;text-align:left;font-weight:600;font-size:13px}
@@ -42,53 +46,82 @@
     <div class="header-inner d-flex align-items-center">
       <a href="index.html" class="logo-badge"><img src="assets/img/logopt.png" alt="Logo Indocement"><div class="logo-badge-text"><span class="logo-badge-name">Indocement</span><span class="logo-badge-sub">Tunggal Prakarsa Tbk.</span></div></a>
       <nav id="navmenu" class="navmenu mx-auto"><ul>
-        <li class="dropdown"><a href="#" onclick="return false;" class="active"><span>Perusahaan</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="perusahaan-tentang.html">Tentang Kami</a></li><li><a href="perusahaan-manajemen.html">Manajemen</a></li><li><a href="perusahaan-struktur.html">Struktur Perusahaan</a></li></ul></li>
-        <li class="dropdown"><a href="#" onclick="return false;"><span>Bisnis Kami</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="bisnis-semen.html">Semen</a></li><li><a href="bisnis-beton.html">Beton Siap Pakai</a></li><li><a href="bisnis-agregat.html">Agregat</a></li></ul></li>
-        <li class="dropdown"><a href="#" onclick="return false;"><span>Investor</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="investor-rups.html">Rapat Umum Pemegang Saham</a></li><li><a href="investor-saham.html">Informasi Saham</a></li><li><a href="investor-laporan.html">Laporan &amp; Presentasi</a></li></ul></li>
-        <li class="dropdown"><a href="#" onclick="return false;"><span>Keberlanjutan</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="keberlanjutan-csr.html">CSR Program</a></li><li><a href="keberlanjutan-kebijakan.html">Kebijakan &amp; Program</a></li></ul></li>
-        <li class="dropdown"><a href="#" onclick="return false;"><span>Media</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="media-berita.html">Berita &amp; Acara</a></li><li><a href="media-siaran-pers.html">Siaran Pers</a></li><li><a href="media-galeri.html">Galeri Media</a></li></ul></li>
+        <li class="dropdown"><a href="#" onclick="return false;" class="active"><span data-lang-key="nav-perusahaan">Perusahaan</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="perusahaan-tentang.html" data-lang-key="nav-tentang">Tentang Kami</a></li><li><a href="perusahaan-manajemen.html" data-lang-key="nav-manajemen">Manajemen</a></li><li><a href="perusahaan-struktur.html" data-lang-key="nav-struktur">Struktur Perusahaan</a></li></ul></li>
+        <li class="dropdown"><a href="#" onclick="return false;"><span data-lang-key="nav-bisnis">Bisnis Kami</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="bisnis-semen.html" data-lang-key="nav-semen">Semen</a></li><li><a href="bisnis-beton.html" data-lang-key="nav-beton">Beton Siap Pakai</a></li><li><a href="bisnis-agregat.html" data-lang-key="nav-agregat">Agregat</a></li></ul></li>
+        <li class="dropdown"><a href="#" onclick="return false;"><span data-lang-key="nav-investor">Investor</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="investor-rups.html" data-lang-key="nav-rups">Rapat Umum Pemegang Saham</a></li><li><a href="investor-saham.html" data-lang-key="nav-saham">Informasi Saham</a></li><li><a href="investor-laporan.html" data-lang-key="nav-laporan">Laporan &amp; Presentasi</a></li></ul></li>
+        <li class="dropdown"><a href="#" onclick="return false;"><span data-lang-key="nav-keberlanjutan">Keberlanjutan</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="keberlanjutan-csr.html" data-lang-key="nav-csr">CSR Program</a></li><li><a href="keberlanjutan-kebijakan.html" data-lang-key="nav-kebijakan">Kebijakan &amp; Program</a></li></ul></li>
+        <li class="dropdown"><a href="#" onclick="return false;"><span data-lang-key="nav-media">Media</span><i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a href="https://www.indocement.co.id/id/news-events" target="_blank" rel="noopener" data-lang-key="nav-berita">Berita &amp; Acara</a></li><li><a href="https://www.indocement.co.id/id/press-release" target="_blank" rel="noopener" data-lang-key="nav-siaran">Siaran Pers</a></li><li><a href="https://www.indocement.co.id/id/gallery" target="_blank" rel="noopener" data-lang-key="nav-galeri">Galeri Media</a></li></ul></li>
       </ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i></nav>
-      <div class="header-actions d-flex align-items-center"><button class="header-search-btn" id="searchToggleBtn"><i class="bi bi-search"></i></button><div class="header-lang d-none d-lg-flex align-items-center gap-1"><a href="#" class="lang-btn active">ID</a><span>▾</span></div></div>
+      <div class="header-actions d-flex align-items-center"><button class="header-search-btn" id="searchToggleBtn"><i class="bi bi-search"></i></button><div class="header-lang d-none d-lg-flex align-items-center gap-1"><a href="#" class="lang-btn active" id="langBtnID" onclick="intpSetLang('id');return false;">ID</a><span>▾</span><a href="#" class="lang-btn" id="langBtnEN" onclick="intpSetLang('en');return false;">EN</a></div></div>
     </div>
     <div id="headerSearchBar" class="header-search-bar"><div class="container-fluid container-xl d-flex align-items-center"><i class="bi bi-search me-3"></i><input type="text" placeholder="Cari..."><button id="searchCloseBtn"><i class="bi bi-x-lg"></i></button></div></div>
   </header>
 
   <main class="main" style="padding-top:78px">
     <div class="ph"><div class="phc container">
-      <nav class="crumb mb-2"><a href="index.html"><i class="bi bi-house-fill me-1"></i>Beranda</a><span><i class="bi bi-chevron-right" style="font-size:10px"></i></span><a href="perusahaan-tentang.html">Perusahaan</a><span><i class="bi bi-chevron-right" style="font-size:10px"></i></span><span style="color:#fff">Struktur Perusahaan</span></nav>
-      <h1>Struktur Perusahaan</h1>
+      <nav class="crumb mb-2"><a href="index.html"><i class="bi bi-house-fill me-1"></i><span data-lang-key="crumb-beranda">Beranda</span></a><span><i class="bi bi-chevron-right" style="font-size:10px"></i></span><a href="perusahaan-tentang.html">Perusahaan</a><span><i class="bi bi-chevron-right" style="font-size:10px"></i></span><span style="color:#fff">Struktur Perusahaan</span></nav>
+      <h1 data-lang-key="page-struktur">Struktur Perusahaan</h1>
     </div></div>
 
     <div class="pc"><div class="container">
 
       <!-- Struktur Kepemilikan -->
       <div class="card-box" data-aos="fade-up">
-        <h2>Struktur Kepemilikan Saham</h2>
+        <h2>Struktur Grup Perseroan</h2>
         <div class="ownership-chart">
           <div class="oc-node">
-            <span class="pct">100%</span>
-            Heidelberg Materials AG
-            <small>(Jerman — Induk Usaha)</small>
+            <span class="pct" style="font-size:16px;color:#fff">Heidelberg Materials AG</span>
+            <small>Perusahaan Induk — Jerman</small>
           </div>
           <div class="oc-line"></div>
           <div class="oc-node">
             <span class="pct">51,0%</span>
-            Birchwood Omnia Ltd &amp; afiliasi
-            <small>(Pemegang saham pengendali)</small>
+            Birchwood Omnia Ltd &amp; Afiliasi
+            <small>Pemegang Saham Pengendali</small>
           </div>
           <div class="oc-line"></div>
-          <div class="oc-node" style="background:#1a3a6b;min-width:280px">
-            <span class="pct" style="color:#fff;font-size:18px">PT Indocement Tunggal Prakarsa Tbk.</span>
-            <small>Kode Saham: INTP | BEI</small>
+          <div class="oc-node main-co">
+            <span class="pct">PT Indocement Tunggal Prakarsa Tbk.</span>
+            <small>Kode Saham: INTP &nbsp;|&nbsp; Bursa Efek Indonesia (BEI)</small>
           </div>
           <div class="oc-line"></div>
+          <div class="oc-hline"></div>
           <div class="oc-branch">
-            <div class="oc-branch-item"><div class="oc-branch-line"></div><div class="oc-node sub"><span class="pct">100%</span>PT Pionirbeton Industri<small>Ready-Mix Concrete</small></div></div>
-            <div class="oc-branch-item"><div class="oc-branch-line"></div><div class="oc-node sub"><span class="pct">100%</span>PT Dea Beton Industri<small>Ready-Mix Concrete</small></div></div>
-            <div class="oc-branch-item"><div class="oc-branch-line"></div><div class="oc-node sub"><span class="pct">70%</span>PT Gunung Tua Abadi<small>Agregat &amp; Tambang</small></div></div>
+            <div class="oc-branch-item">
+              <div class="oc-branch-line"></div>
+              <div class="oc-node sub">
+                <span class="pct">100%</span>
+                PT Pionirbeton Industri
+                <small>Ready-Mix Concrete</small>
+              </div>
+            </div>
+            <div class="oc-branch-item">
+              <div class="oc-branch-line"></div>
+              <div class="oc-node sub">
+                <span class="pct">100%</span>
+                PT Dea Beton Industri
+                <small>Ready-Mix Concrete</small>
+              </div>
+            </div>
+            <div class="oc-branch-item">
+              <div class="oc-branch-line"></div>
+              <div class="oc-node sub">
+                <span class="pct">70%</span>
+                PT Gunung Tua Abadi
+                <small>Agregat &amp; Tambang</small>
+              </div>
+            </div>
+            <div class="oc-branch-item">
+              <div class="oc-branch-line"></div>
+              <div class="oc-node sub">
+                <span class="pct">99,9%</span>
+                PT Tiga Roda Properti
+                <small>Properti &amp; Aset</small>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="mt-4" style="font-size:13.5px;color:#6a7a8a;text-align:center">* Data kepemilikan saham berdasarkan laporan terbaru per September 2026. Publik memegang 49% saham INTP yang diperdagangkan di BEI.</p>
+        <p class="mt-4" style="font-size:13px;color:#6a7a8a;text-align:center">* Data kepemilikan saham berdasarkan laporan terbaru per September 2026. Publik memegang 49% saham INTP yang diperdagangkan di BEI.</p>
       </div>
 
       <!-- Komposisi Pemegang Saham -->
@@ -148,7 +181,8 @@
         .cq-item a{display:flex;align-items:center;opacity:.7;transition:opacity .3s;}
         .cq-item a:hover{opacity:1;}
         .cq-item img{height:72px;width:auto;max-width:180px;object-fit:contain;display:block;}
-      </style>
+      
+    .main p{text-align:justify}</style>
       <div class="cq-wrap">
         <div class="cq-track">
           <div class="cq-item"><a href="https://sementigaroda.com/" target="_blank" rel="noopener"><img src="assets/img/clients/clients-1.webp" alt="Semen Tiga Roda"></a></div>
@@ -176,31 +210,31 @@
             <p>Wisma Indocement Lt. 13</p>
             <p>Jl. Jenderal Sudirman Kav. 70-71</p>
             <p>Jakarta Selatan 12910, Indonesia</p>
-            <p class="mt-3"><strong>Telepon:</strong> <span>+62 21 251 2121</span></p>
-            <p><strong>Email:</strong> <span>corsec@indocement.co.id</span></p>
+            <p class="mt-3"><strong data-lang-key="ft-phone-label">Telepon:</strong> <span><a href="https://wa.me/6288806406294" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">+62 21 251 2121</a></span></p>
+            <p><strong data-lang-key="ft-email-label">Email:</strong> <span>corsec@indocement.co.id</span></p>
           </div>
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Tautan Cepat</h4>
+          <h4 data-lang-key="footer-quick">Tautan Cepat</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Beranda</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="perusahaan-tentang.html">Tentang Kami</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-semen.html">Produk</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Kebijakan Privasi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html" data-lang-key="footer-beranda">Beranda</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="perusahaan-tentang.html" data-lang-key="nav-tentang">Tentang Kami</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-semen.html" data-lang-key="footer-produk-link">Produk</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#" data-lang-key="footer-privasi">Kebijakan Privasi</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Produk Kami</h4>
+          <h4 data-lang-key="footer-produk-title">Produk Kami</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-semen.html">Semen Tiga Roda</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-beton.html">Beton Siap Pakai</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-agregat.html">Agregat</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="media-berita.html">Berita</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-semen.html" data-lang-key="footer-semen-link">Semen Tiga Roda</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-beton.html" data-lang-key="nav-beton">Beton Siap Pakai</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="bisnis-agregat.html" data-lang-key="nav-agregat">Agregat</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://www.indocement.co.id/id/news-events" target="_blank" rel="noopener" data-lang-key="footer-berita-link">Berita</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-12">
-          <h4>Ikuti Kami</h4>
-          <p>Temukan informasi terbaru Indocement di media sosial kami</p>
+          <h4 data-lang-key="footer-sosmed">Ikuti Kami</h4>
+          <p data-lang-key="footer-sosmed-p">Temukan informasi terbaru Indocement di media sosial kami</p>
           <div class="social-links d-flex">
             <a href="https://x.com/harmoni3roda" target="_blank"><i class="bi bi-twitter-x"></i></a>
             <a href="https://www.facebook.com/sementigaroda" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -213,8 +247,8 @@
       </div>
     </div>
     <div class="container copyright text-center mt-4">
-      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">PT Indocement Tunggal Prakarsa Tbk.</strong> <span>Hak Cipta Dilindungi</span></p>
-      <div class="credits">Template by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a></div>
+      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">PT Indocement Tunggal Prakarsa Tbk.</strong> <span data-lang-key="footer-copy">Hak Cipta Dilindungi</span></p>
+      <div class="credits"><span data-lang-key="credits-text">Dibuat oleh</span> <strong>Kelompok E6</strong></div>
     </div>
   </footer>
 
@@ -225,7 +259,12 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/lang.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>const sb=document.getElementById('searchToggleBtn'),bar=document.getElementById('headerSearchBar'),sc=document.getElementById('searchCloseBtn');sb&&sb.addEventListener('click',()=>{bar.classList.toggle('open');if(bar.classList.contains('open'))bar.querySelector('input').focus()});sc&&sc.addEventListener('click',()=>bar.classList.remove('open'));</script>
+  <script>const sb=document.getElementById('searchToggleBtn'),bar=document.getElementById('headerSearchBar'),sc=document.getElementById('searchCloseBtn'),si=bar?bar.querySelector('input'):null;
+sb&&sb.addEventListener('click',()=>{bar.classList.toggle('open');if(bar.classList.contains('open')&&si)setTimeout(()=>si.focus(),50)});
+sc&&sc.addEventListener('click',()=>bar.classList.remove('open'));
+si&&si.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();var q=si.value.trim();if(q.length>0){var pages=[{t:'Beranda',u:'index.html'},{t:'Tentang Kami',u:'perusahaan-tentang.html'},{t:'Manajemen',u:'perusahaan-manajemen.html'},{t:'Struktur',u:'perusahaan-struktur.html'},{t:'Semen',u:'bisnis-semen.html'},{t:'Beton',u:'bisnis-beton.html'},{t:'Agregat',u:'bisnis-agregat.html'},{t:'RUPS',u:'investor-rups.html'},{t:'Saham',u:'investor-saham.html'},{t:'Laporan',u:'investor-laporan.html'},{t:'CSR',u:'keberlanjutan-csr.html'},{t:'Kebijakan',u:'keberlanjutan-kebijakan.html'},{t:'Berita',u:'https://www.indocement.co.id/id/news-events'},{t:'Siaran Pers',u:'https://www.indocement.co.id/id/press-release'},{t:'Galeri',u:'https://www.indocement.co.id/id/gallery'}];var ql=q.toLowerCase();var f=pages.filter(function(p){return p.t.toLowerCase().includes(ql)});if(f.length>0){window.location.href=f[0].u}else{window.open('https://www.indocement.co.id/id/search?q='+encodeURIComponent(q),'_blank')}}}});</script>
 </body>
 </html>
+
