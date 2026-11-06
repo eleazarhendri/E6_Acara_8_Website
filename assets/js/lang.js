@@ -58,7 +58,21 @@ var intpLang = {
   'page-kebijakan':     {id:'Kebijakan &amp; Program Keberlanjutan', en:'Sustainability Policy &amp; Program'},
   'page-berita':        {id:'Berita &amp; Acara',  en:'News &amp; Events'},
   'page-siaran':        {id:'Siaran Pers',         en:'Press Release'},
-  'page-galeri':        {id:'Galeri Media',        en:'Media Gallery'}
+  'page-galeri':        {id:'Galeri Media',        en:'Media Gallery'},
+  // Breadcrumb path texts
+  'crumb-beranda':      {id:'Beranda',             en:'Home'},
+  'crumb-tentang':      {id:'Tentang Kami',        en:'About Us'},
+  'crumb-manajemen':    {id:'Manajemen',           en:'Management'},
+  'crumb-struktur':     {id:'Struktur Perusahaan', en:'Company Structure'},
+  'crumb-semen':        {id:'Bisnis Kami — Semen', en:'Our Business — Cement'},
+  'crumb-beton':        {id:'Bisnis Kami — Beton Siap Pakai', en:'Our Business — Ready-Mix Concrete'},
+  'crumb-agregat':      {id:'Bisnis Kami — Agregat', en:'Our Business — Aggregate'},
+  'crumb-rups':         {id:'Investor — RUPS',     en:'Investor — GMS'},
+  'crumb-saham':        {id:'Investor — Informasi Saham', en:'Investor — Stock Information'},
+  'crumb-laporan':      {id:'Investor — Laporan &amp; Presentasi', en:'Investor — Reports &amp; Presentations'},
+  'crumb-csr':          {id:'Keberlanjutan — CSR Program', en:'Sustainability — CSR Program'},
+  'crumb-kebijakan':    {id:'Keberlanjutan — Kebijakan &amp; Program', en:'Sustainability — Policy &amp; Program'},
+  'crumb-perusahaan-link': {id:'Perusahaan',       en:'Company'},
 };
 
 /* ---- Text-node translation map for page content ---- */
